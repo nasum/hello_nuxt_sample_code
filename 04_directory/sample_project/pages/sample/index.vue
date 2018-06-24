@@ -14,7 +14,6 @@
 
 export default {
   asyncData(context) {
-    console.log(context);
     return new Promise((resolve, reject) => {
       resolve();
     }).then(() => {

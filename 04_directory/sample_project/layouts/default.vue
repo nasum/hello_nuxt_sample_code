@@ -5,6 +5,12 @@
   </div>
 </template>
 
-<style>
+<script>
+export default {
+  middleware: ["promise_01","promise_02"]
+}
+</script>
 
+
+<style>
 </style>
