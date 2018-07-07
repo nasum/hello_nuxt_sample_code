@@ -32,12 +32,13 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend(config, { isDev, isClient }) {
-      if (isClient) {
+    extend(config, options) {
+      console.log('options', options)
+      if (options.isClient) {
         // console.log(config)
       }
 
-      if (isDev && isClient) {
+      if (options.isDev && options.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -106,3 +107,4 @@ module.exports = {
       }
     }
   }
+}
